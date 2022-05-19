@@ -23,27 +23,14 @@ class CommentsTableViewController: UITableViewController {
     }
     
     func fetchData() {
-       
-        guard let url = URL(string: jsonUrlString) else { return }
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data else { return }
-            
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                
-                self.comments = try decoder.decode([Comments].self, from: data)
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-                
-            } catch {
-                print("Error serialization json", error)
+        NetworkManager.fetchData(url: jsonUrlString) { [weak self] comments in
+            self?.comments = comments
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
             }
             
-        }.resume()
+        }
     }
     
     private func configureCell(cell: TableViewCell, for indexPath: IndexPath) {

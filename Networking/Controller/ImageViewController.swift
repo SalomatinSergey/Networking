@@ -28,17 +28,10 @@ class ImageViewController: UIViewController {
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         
-        guard let url = URL(string: jpgUrl) else { return }
-        
-        let session = URLSession.shared
-        session.dataTask(with: url) { data, response, error in
-            if let data = data, let image = UIImage(data: data) {
-                DispatchQueue.main.async { [weak self] in
-                    self?.activityIndicator.stopAnimating()
-                    self?.imageView.image = image
-                }
-            }
-        }.resume()
+        NetworkManager.downloadImage(url: jpgUrl) { [weak self] image in
+            self?.activityIndicator.stopAnimating()
+            self?.imageView.image = image
+        }
     }
 
 }

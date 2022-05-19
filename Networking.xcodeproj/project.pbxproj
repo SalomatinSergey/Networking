@@ -19,6 +19,7 @@
 		A5A87B0F2836199E0001BB76 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87B0E2836199E0001BB76 /* Comments.swift */; };
 		A5A87B15283624360001BB76 /* WebSiteDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87B14283624360001BB76 /* WebSiteDescription.swift */; };
 		A5A87B1728362D050001BB76 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87B1628362D050001BB76 /* TableViewCell.swift */; };
+		A5A87B19283645810001BB76 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87B18283645810001BB76 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A5A87B0E2836199E0001BB76 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		A5A87B14283624360001BB76 /* WebSiteDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSiteDescription.swift; sourceTree = "<group>"; };
 		A5A87B1628362D050001BB76 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		A5A87B18283645810001BB76 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				A5A87B1128361C580001BB76 /* Model */,
+				A5A87B1A283645920001BB76 /* Network */,
 				A5A87B1028361C420001BB76 /* Controller */,
 				A5A87B1328361C7F0001BB76 /* View */,
 				A5A87B1228361C730001BB76 /* Support Files */,
@@ -115,6 +118,14 @@
 				A5A87AFD2835FE520001BB76 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A5A87B1A283645920001BB76 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A5A87B18283645810001BB76 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 			files = (
 				A5A87AF72835FE4E0001BB76 /* ViewController.swift in Sources */,
 				A5A87AF32835FE4E0001BB76 /* AppDelegate.swift in Sources */,
+				A5A87B19283645810001BB76 /* NetworkManager.swift in Sources */,
 				A5A87B15283624360001BB76 /* WebSiteDescription.swift in Sources */,
 				A5A87B1728362D050001BB76 /* TableViewCell.swift in Sources */,
 				A5A87B0D283616AC0001BB76 /* CommentsTableViewController.swift in Sources */,
