@@ -13,6 +13,12 @@
 		A5A87AFA2835FE4E0001BB76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A87AF82835FE4E0001BB76 /* Main.storyboard */; };
 		A5A87AFC2835FE520001BB76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5A87AFB2835FE520001BB76 /* Assets.xcassets */; };
 		A5A87AFF2835FE520001BB76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A87AFD2835FE520001BB76 /* LaunchScreen.storyboard */; };
+		A5A87B07283605EA0001BB76 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87B06283605EA0001BB76 /* ImageViewController.swift */; };
+		A5A87B0B283616900001BB76 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87B0A283616900001BB76 /* DescriptionViewController.swift */; };
+		A5A87B0D283616AC0001BB76 /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87B0C283616AC0001BB76 /* CommentsTableViewController.swift */; };
+		A5A87B0F2836199E0001BB76 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87B0E2836199E0001BB76 /* Comments.swift */; };
+		A5A87B15283624360001BB76 /* WebSiteDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87B14283624360001BB76 /* WebSiteDescription.swift */; };
+		A5A87B1728362D050001BB76 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87B1628362D050001BB76 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		A5A87AFB2835FE520001BB76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5A87AFE2835FE520001BB76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5A87B002835FE520001BB76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5A87B06283605EA0001BB76 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		A5A87B0A283616900001BB76 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		A5A87B0C283616AC0001BB76 /* CommentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
+		A5A87B0E2836199E0001BB76 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		A5A87B14283624360001BB76 /* WebSiteDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSiteDescription.swift; sourceTree = "<group>"; };
+		A5A87B1628362D050001BB76 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,53 @@
 		A5A87AF12835FE4E0001BB76 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				A5A87AF22835FE4E0001BB76 /* AppDelegate.swift */,
-				A5A87AF42835FE4E0001BB76 /* SceneDelegate.swift */,
-				A5A87AF62835FE4E0001BB76 /* ViewController.swift */,
-				A5A87AF82835FE4E0001BB76 /* Main.storyboard */,
-				A5A87AFB2835FE520001BB76 /* Assets.xcassets */,
-				A5A87AFD2835FE520001BB76 /* LaunchScreen.storyboard */,
-				A5A87B002835FE520001BB76 /* Info.plist */,
+				A5A87B1128361C580001BB76 /* Model */,
+				A5A87B1028361C420001BB76 /* Controller */,
+				A5A87B1328361C7F0001BB76 /* View */,
+				A5A87B1228361C730001BB76 /* Support Files */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		A5A87B1028361C420001BB76 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A5A87B06283605EA0001BB76 /* ImageViewController.swift */,
+				A5A87AF62835FE4E0001BB76 /* ViewController.swift */,
+				A5A87B0C283616AC0001BB76 /* CommentsTableViewController.swift */,
+				A5A87B0A283616900001BB76 /* DescriptionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A5A87B1128361C580001BB76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5A87B0E2836199E0001BB76 /* Comments.swift */,
+				A5A87B14283624360001BB76 /* WebSiteDescription.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A5A87B1228361C730001BB76 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5A87AF22835FE4E0001BB76 /* AppDelegate.swift */,
+				A5A87AF42835FE4E0001BB76 /* SceneDelegate.swift */,
+				A5A87AFB2835FE520001BB76 /* Assets.xcassets */,
+				A5A87B002835FE520001BB76 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		A5A87B1328361C7F0001BB76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5A87B1628362D050001BB76 /* TableViewCell.swift */,
+				A5A87AF82835FE4E0001BB76 /* Main.storyboard */,
+				A5A87AFD2835FE520001BB76 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +190,12 @@
 			files = (
 				A5A87AF72835FE4E0001BB76 /* ViewController.swift in Sources */,
 				A5A87AF32835FE4E0001BB76 /* AppDelegate.swift in Sources */,
+				A5A87B15283624360001BB76 /* WebSiteDescription.swift in Sources */,
+				A5A87B1728362D050001BB76 /* TableViewCell.swift in Sources */,
+				A5A87B0D283616AC0001BB76 /* CommentsTableViewController.swift in Sources */,
+				A5A87B0B283616900001BB76 /* DescriptionViewController.swift in Sources */,
+				A5A87B07283605EA0001BB76 /* ImageViewController.swift in Sources */,
+				A5A87B0F2836199E0001BB76 /* Comments.swift in Sources */,
 				A5A87AF52835FE4E0001BB76 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +347,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2BFF25EMY9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Networking/Info.plist;
+				INFOPLIST_FILE = "Networking/Support Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +375,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2BFF25EMY9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Networking/Info.plist;
+				INFOPLIST_FILE = "Networking/Support Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
