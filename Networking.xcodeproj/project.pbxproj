@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A5A594A2283756C9004571E9 /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A594A1283756C9004571E9 /* ImageProperties.swift */; };
+		A5A594A42837600B004571E9 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A594A32837600B004571E9 /* DataProvider.swift */; };
 		A5A87AF32835FE4E0001BB76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87AF22835FE4E0001BB76 /* AppDelegate.swift */; };
 		A5A87AF52835FE4E0001BB76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87AF42835FE4E0001BB76 /* SceneDelegate.swift */; };
 		A5A87AF72835FE4E0001BB76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87AF62835FE4E0001BB76 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		A5A594A1283756C9004571E9 /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
+		A5A594A32837600B004571E9 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		A5A87AEF2835FE4E0001BB76 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A87AF22835FE4E0001BB76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5A87AF42835FE4E0001BB76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,8 +86,8 @@
 		A5A87B1028361C420001BB76 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A5A87B06283605EA0001BB76 /* ImageViewController.swift */,
 				A5A87AF62835FE4E0001BB76 /* ViewController.swift */,
+				A5A87B06283605EA0001BB76 /* ImageViewController.swift */,
 				A5A87B0C283616AC0001BB76 /* CommentsTableViewController.swift */,
 				A5A87B0A283616900001BB76 /* DescriptionViewController.swift */,
 			);
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				A5A87B18283645810001BB76 /* NetworkManager.swift */,
+				A5A594A32837600B004571E9 /* DataProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				A5A87B19283645810001BB76 /* NetworkManager.swift in Sources */,
 				A5A87B15283624360001BB76 /* WebSiteDescription.swift in Sources */,
 				A5A87B1728362D050001BB76 /* TableViewCell.swift in Sources */,
+				A5A594A42837600B004571E9 /* DataProvider.swift in Sources */,
 				A5A87B0D283616AC0001BB76 /* CommentsTableViewController.swift in Sources */,
 				A5A87B0B283616900001BB76 /* DescriptionViewController.swift in Sources */,
 				A5A87B07283605EA0001BB76 /* ImageViewController.swift in Sources */,
