@@ -9,7 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let jsonUrl = "https://jsonplaceholder.typicode.com/posts"
+    private let jsonUrl = "https://jsonplaceholder.typicode.com/posts"
+    private let uploadImage = "https://api.imgur.com/3/image"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,11 @@ class ViewController: UIViewController {
     @IBAction func postRequest(_ sender: Any) {
         
         NetworkManager.postRequest(url: jsonUrl)
+    }
+    
+    @IBAction func uploadImageButton(_ sender: Any) {
+        
+        NetworkManager.uploadImage(url: uploadImage)
     }
     
 }

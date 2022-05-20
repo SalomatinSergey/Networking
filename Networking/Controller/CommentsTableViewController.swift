@@ -9,7 +9,7 @@ import UIKit
 
 class CommentsTableViewController: UITableViewController {
     
-    let jsonUrlString = "https://jsonplaceholder.typicode.com/posts/1/comments"
+    private let jsonUrlString = "https://jsonplaceholder.typicode.com/posts/1/comments"
 
     private var comments = [Comments]()
     private var commentName: String?

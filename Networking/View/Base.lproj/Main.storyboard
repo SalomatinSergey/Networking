@@ -20,7 +20,7 @@
                                 <rect key="frame" x="20" y="138" width="374" height="674"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cuk-j1-oo1">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="146"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="111"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Download Image">
                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
@@ -29,8 +29,18 @@
                                             <segue destination="R8L-ko-1kJ" kind="show" identifier="showSegue" id="8M6-Nd-9Qd"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4e-qa-qUi">
+                                        <rect key="frame" x="0.0" y="141" width="374" height="110.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Upload Image">
+                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="uploadImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QoJ-9b-kXM"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxT-Ya-o1A">
-                                        <rect key="frame" x="0.0" y="176" width="374" height="146"/>
+                                        <rect key="frame" x="0.0" y="281.5" width="374" height="111"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Get">
                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
@@ -40,7 +50,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEn-Yv-uQg">
-                                        <rect key="frame" x="0.0" y="352" width="374" height="146"/>
+                                        <rect key="frame" x="0.0" y="422.5" width="374" height="110.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Post">
                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
@@ -50,7 +60,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQK-J5-Qww">
-                                        <rect key="frame" x="0.0" y="528" width="374" height="146"/>
+                                        <rect key="frame" x="0.0" y="563" width="374" height="111"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Comments">
                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5A594A2283756C9004571E9 /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A594A1283756C9004571E9 /* ImageProperties.swift */; };
 		A5A87AF32835FE4E0001BB76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87AF22835FE4E0001BB76 /* AppDelegate.swift */; };
 		A5A87AF52835FE4E0001BB76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87AF42835FE4E0001BB76 /* SceneDelegate.swift */; };
 		A5A87AF72835FE4E0001BB76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A87AF62835FE4E0001BB76 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A5A594A1283756C9004571E9 /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 		A5A87AEF2835FE4E0001BB76 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5A87AF22835FE4E0001BB76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5A87AF42835FE4E0001BB76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				A5A87B0E2836199E0001BB76 /* Comments.swift */,
 				A5A87B14283624360001BB76 /* WebSiteDescription.swift */,
+				A5A594A1283756C9004571E9 /* ImageProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A594A2283756C9004571E9 /* ImageProperties.swift in Sources */,
 				A5A87AF72835FE4E0001BB76 /* ViewController.swift in Sources */,
 				A5A87AF32835FE4E0001BB76 /* AppDelegate.swift in Sources */,
 				A5A87B19283645810001BB76 /* NetworkManager.swift in Sources */,
