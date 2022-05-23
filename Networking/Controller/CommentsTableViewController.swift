@@ -10,6 +10,7 @@ import UIKit
 class CommentsTableViewController: UITableViewController {
     
     private let jsonUrlString = "https://jsonplaceholder.typicode.com/posts/1/comments"
+    private let postRequestUrl = ViewController.jsonUrl
 
     private var comments = [Comments]()
     private var commentName: String?
@@ -36,6 +37,17 @@ class CommentsTableViewController: UITableViewController {
     func fetchDataWithAlamofire() {
         
         AlamofireNetworkRequest.sendRequest(url: jsonUrlString) {[weak self] comments in
+            self?.comments = comments
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
+    }
+    
+    func postRequest() {
+        
+        AlamofireNetworkRequest.postRequest(url: postRequestUrl) { [weak self] comments in
+            
             self?.comments = comments
             DispatchQueue.main.async {
                 self?.tableView.reloadData()

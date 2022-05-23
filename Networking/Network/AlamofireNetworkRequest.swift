@@ -102,4 +102,72 @@ class AlamofireNetworkRequest {
 //            print(string)
 //        }
 //    }
+    
+    static func postRequest(url: String, completion: @escaping (_ comments: [Comments]) -> ()) {
+        
+        guard let url = URL(string: url) else { return }
+        let userData: [String: Any] = ["name": "Sergey",
+                                       "email": "salomatinsv8@gmail.com",
+                                       "body": "est natus enim nihil est dolore omnis voluptatem numquam" +
+                                       "\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur" +
+                                       "\nnihil sint nostrum voluptatem reiciendis et"]
+        
+        let request = AF.request(url, method: .post, parameters: userData)
+        request.responseJSON { (responseJSON) in
+            
+            guard let statusCode = responseJSON.response?.statusCode else { return }
+            print("Status code:", statusCode)
+            
+            switch responseJSON.result {
+                case .success(let value):
+                    print(value)
+                    
+                    guard let jsonObject = value as? [String: Any],
+                          let comment = Comments(json: jsonObject)
+                    else { return }
+                    
+                    var comments = [Comments]()
+                    comments.append(comment)
+                    
+                    completion(comments)
+                case .failure(let error):
+                    print(error)
+                    
+            }
+        }
+    }
+    
+    static func uploadImage(url: String) {
+        
+        guard let url = URL(string: url) else { return }
+        
+        let image = UIImage(named: "fruits")!
+        let data = image.pngData()!
+        let httpHeaders : HTTPHeaders = ["Authorization": "Client-ID 1bv25r1rq362h5b"]
+        
+        
+        let uploadRequest = AF.request(url, method: .post)
+        
+        _ = AF.upload(multipartFormData: { (multiplatformData) in
+
+            multiplatformData.append(data, withName: "image")
+
+        }
+                               , to: url
+                               , headers: httpHeaders) { (encodingCompletion) in
+            
+            uploadRequest.validate().responseJSON { (responseJson) in
+                
+                switch responseJson.result {
+                    case .failure(let error):
+                        print(error)
+                        
+                    case .success(let value):
+                        print(value)
+                        
+                }
+            }
+            
+        }
+    }
 }

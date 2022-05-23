@@ -10,7 +10,7 @@ import UserNotifications
 
 class ViewController: UIViewController {
     
-    private let jsonUrl = "https://jsonplaceholder.typicode.com/posts"
+    static let jsonUrl = "https://jsonplaceholder.typicode.com/posts"
     private let uploadImage = "https://api.imgur.com/3/image"
     private var alertController: UIAlertController!
     
@@ -76,12 +76,12 @@ class ViewController: UIViewController {
     
     @IBAction func getRequest(_ sender: Any) {
         
-        NetworkManager.getRequest(url: jsonUrl)
+        NetworkManager.getRequest(url: ViewController.jsonUrl)
     }
     
     @IBAction func postRequest(_ sender: Any) {
         
-        NetworkManager.postRequest(url: jsonUrl)
+        NetworkManager.postRequest(url: ViewController.jsonUrl)
     }
     
     @IBAction func uploadImageButton(_ sender: Any) {
@@ -103,7 +103,13 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "showSegueAlmf", sender: self)
     }
     
+    @IBAction func postRequestWithAlamofire(_ sender: Any) {
+        performSegue(withIdentifier: "postRequest", sender: self)
+    }
     
+    @IBAction func uploadImageWithAlamofire(_ sender: Any) {
+        AlamofireNetworkRequest.uploadImage(url: uploadImage)
+    }
     
     // MARK: - Navigation
     
@@ -121,6 +127,8 @@ class ViewController: UIViewController {
                 imageVC?.fetchImage()
             case "showSegueAlmf":
                 imageVC?.fetchImageWithAlamofire()
+            case "postRequest":
+                commentsVC?.postRequest()
             default:
                 break
                 
