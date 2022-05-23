@@ -33,16 +33,6 @@ struct Comments: Decodable {
     static func getArray(from jsonArray: Any) -> [Comments]? {
         
         guard let jsonArray = jsonArray as? Array<[String: Any]> else { return nil}
-        
-        var comments: [Comments] = []
-        
-        for jsonObject in jsonArray {
-            
-            if let comment = Comments(json: jsonObject) {
-                
-                comments.append(comment)
-            }
-        }
-        return comments
+        return jsonArray.compactMap { Comments(json: $0) }
     }
 }

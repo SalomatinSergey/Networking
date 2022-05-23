@@ -99,18 +99,28 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func showImageWithAlamofire(_ sender: Any) {
+        performSegue(withIdentifier: "showSegueAlmf", sender: self)
+    }
+    
+    
     
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let commentsVC = segue.destination as? CommentsTableViewController
+        let imageVC = segue.destination as? ImageViewController
         
         switch segue.identifier {
             case "Comments":
                 commentsVC?.fetchData()
             case "CommentsWithAlamoFire":
                 commentsVC?.fetchDataWithAlamofire()
+            case "showSegue":
+                imageVC?.fetchImage()
+            case "showSegueAlmf":
+                imageVC?.fetchImageWithAlamofire()
             default:
                 break
                 

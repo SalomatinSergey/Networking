@@ -102,7 +102,7 @@ class CommentsTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let descriptionViewController = segue.destination as! DescriptionViewController
-        descriptionViewController.selectedCourse = commentName
+        descriptionViewController.selectedComments = commentName
         
         if let url = commentUrl {
             descriptionViewController.commentUrl = url
