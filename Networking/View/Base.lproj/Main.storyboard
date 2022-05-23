@@ -20,7 +20,7 @@
                                 <rect key="frame" x="20" y="138" width="374" height="674"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eB4-9r-ICO">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="87.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="70.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Download File">
                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
@@ -30,7 +30,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cuk-j1-oo1">
-                                        <rect key="frame" x="0.0" y="117.5" width="374" height="87"/>
+                                        <rect key="frame" x="0.0" y="100.5" width="374" height="70.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Download Image">
                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
@@ -40,7 +40,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4e-qa-qUi">
-                                        <rect key="frame" x="0.0" y="234.5" width="374" height="87.5"/>
+                                        <rect key="frame" x="0.0" y="201" width="374" height="70.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Upload Image">
                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
@@ -50,7 +50,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxT-Ya-o1A">
-                                        <rect key="frame" x="0.0" y="352" width="374" height="87.5"/>
+                                        <rect key="frame" x="0.0" y="301.5" width="374" height="71"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Get">
                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
@@ -60,7 +60,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEn-Yv-uQg">
-                                        <rect key="frame" x="0.0" y="469.5" width="374" height="87"/>
+                                        <rect key="frame" x="0.0" y="402.5" width="374" height="70.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Post">
                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
@@ -70,13 +70,23 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQK-J5-Qww">
-                                        <rect key="frame" x="0.0" y="586.5" width="374" height="87.5"/>
+                                        <rect key="frame" x="0.0" y="503" width="374" height="70.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Comments">
                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="n18-jN-uGB" kind="show" id="btB-Xm-MAt"/>
+                                            <segue destination="n18-jN-uGB" kind="show" identifier="Comments" id="btB-Xm-MAt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AO-iB-C66">
+                                        <rect key="frame" x="0.0" y="603.5" width="374" height="70.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Comments with Alamofire">
+                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="showCommentsWithAlamofire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2TZ-ip-bsu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -93,6 +103,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Controls" id="dCF-M1-IRS"/>
+                    <connections>
+                        <segue destination="n18-jN-uGB" kind="show" identifier="CommentsWithAlamoFire" id="5y1-6t-vMn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -282,6 +295,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5y1-6t-vMn"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

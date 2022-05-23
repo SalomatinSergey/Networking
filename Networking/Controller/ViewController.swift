@@ -93,7 +93,31 @@ class ViewController: UIViewController {
         dataProvider.startDownload()
         showAlert()
     }
+    
+    @IBAction func showCommentsWithAlamofire(_ sender: Any) {
+        performSegue(withIdentifier: "CommentsWithAlamoFire", sender: self)
+        
+    }
+    
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let commentsVC = segue.destination as? CommentsTableViewController
+        
+        switch segue.identifier {
+            case "Comments":
+                commentsVC?.fetchData()
+            case "CommentsWithAlamoFire":
+                commentsVC?.fetchDataWithAlamofire()
+            default:
+                break
+                
+        }
+    }
 }
+
 
 extension ViewController {
     

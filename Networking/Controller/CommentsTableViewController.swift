@@ -15,13 +15,13 @@ class CommentsTableViewController: UITableViewController {
     private var commentName: String?
     private var commentUrl: String?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        fetchData()
-
-    }
-    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//        fetchData()
+//
+//    }
+//    
     func fetchData() {
         
         NetworkManager.fetchData(url: jsonUrlString) { [weak self] comments in
@@ -30,6 +30,16 @@ class CommentsTableViewController: UITableViewController {
                 self?.tableView.reloadData()
             }
             
+        }
+    }
+    
+    func fetchDataWithAlamofire() {
+        
+        AlamofireNetworkRequest.sendRequest(url: jsonUrlString) {[weak self] comments in
+            self?.comments = comments
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
         }
     }
     
