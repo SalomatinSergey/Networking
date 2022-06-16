@@ -10,7 +10,7 @@ import WebKit
 
 class DescriptionViewController: UIViewController {
     
-    var selectedCourse: String?
+    var selectedComments: String?
     var commentUrl = ""
 
     @IBOutlet weak var webView: WKWebView!
@@ -20,7 +20,7 @@ class DescriptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = selectedCourse
+        title = selectedComments
         
         guard let url = URL(string: commentUrl) else { return }
         let request = URLRequest(url: url)

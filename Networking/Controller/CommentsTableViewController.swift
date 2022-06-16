@@ -10,18 +10,19 @@ import UIKit
 class CommentsTableViewController: UITableViewController {
     
     private let jsonUrlString = "https://jsonplaceholder.typicode.com/posts/1/comments"
+    private let postRequestUrl = ViewController.jsonUrl
 
     private var comments = [Comments]()
     private var commentName: String?
     private var commentUrl: String?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        fetchData()
-
-    }
-    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//        fetchData()
+//
+//    }
+//    
     func fetchData() {
         
         NetworkManager.fetchData(url: jsonUrlString) { [weak self] comments in
@@ -30,6 +31,27 @@ class CommentsTableViewController: UITableViewController {
                 self?.tableView.reloadData()
             }
             
+        }
+    }
+    
+    func fetchDataWithAlamofire() {
+        
+        AlamofireNetworkRequest.sendRequest(url: jsonUrlString) {[weak self] comments in
+            self?.comments = comments
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
+    }
+    
+    func postRequest() {
+        
+        AlamofireNetworkRequest.postRequest(url: postRequestUrl) { [weak self] comments in
+            
+            self?.comments = comments
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
         }
     }
     
@@ -92,7 +114,7 @@ class CommentsTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let descriptionViewController = segue.destination as! DescriptionViewController
-        descriptionViewController.selectedCourse = commentName
+        descriptionViewController.selectedComments = commentName
         
         if let url = commentUrl {
             descriptionViewController.commentUrl = url

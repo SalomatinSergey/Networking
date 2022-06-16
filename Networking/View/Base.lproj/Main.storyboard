@@ -29,26 +29,87 @@
                                             <action selector="downloadFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z3U-Jz-emD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cuk-j1-oo1">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="9l8-IE-0NW">
                                         <rect key="frame" x="0.0" y="117.5" width="374" height="87"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Download Image">
-                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="R8L-ko-1kJ" kind="show" identifier="showSegue" id="8M6-Nd-9Qd"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4e-qa-qUi">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cuk-j1-oo1">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="87"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Download Image">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="AppleSDGothicNeo-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="R8L-ko-1kJ" kind="show" identifier="showSegue" id="8M6-Nd-9Qd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSW-wl-b4y">
+                                                <rect key="frame" x="202" y="0.0" width="172" height="87"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Download Image Almf">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="AppleSDGothicNeo-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="showImageWithAlamofire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="52X-an-lEo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6tn-ug-wRa">
                                         <rect key="frame" x="0.0" y="234.5" width="374" height="87.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Upload Image">
-                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="uploadImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QoJ-9b-kXM"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2or-pY-cGn">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="87.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Upload Image">
+                                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="uploadImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aCK-UV-eHu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X4e-qa-qUi">
+                                                <rect key="frame" x="202" y="0.0" width="172" height="87.5"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Upload Image with Alamofire">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="AppleSDGothicNeo-Regular"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <buttonConfiguration key="configuration" style="gray">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Upload Image with Alamofire">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="AppleSDGothicNeo-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="uploadImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QoJ-9b-kXM"/>
+                                                    <action selector="uploadImageWithAlamofire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c6s-G6-n2R"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxT-Ya-o1A">
                                         <rect key="frame" x="0.0" y="352" width="374" height="87.5"/>
                                         <state key="normal" title="Button"/>
@@ -59,26 +120,78 @@
                                             <action selector="getRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="18G-Op-hZ6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEn-Yv-uQg">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cWz-ia-c7L">
                                         <rect key="frame" x="0.0" y="469.5" width="374" height="87"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Post">
-                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="postRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wBT-Tu-XvR"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQK-J5-Qww">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSO-8Q-TRG">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="87"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Post">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="AppleSDGothicNeo-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="postRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y9b-bt-p40"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEn-Yv-uQg">
+                                                <rect key="frame" x="202" y="0.0" width="172" height="87"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Post with Alamofire">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="AppleSDGothicNeo-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="postRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wBT-Tu-XvR"/>
+                                                    <action selector="postRequestWithAlamofire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6sT-rD-0cU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8ax-4X-DUZ">
                                         <rect key="frame" x="0.0" y="586.5" width="374" height="87.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Comments">
-                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="n18-jN-uGB" kind="show" id="btB-Xm-MAt"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQK-J5-Qww">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="87.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Comments">
+                                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="24"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="n18-jN-uGB" kind="show" identifier="Comments" id="btB-Xm-MAt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AO-iB-C66">
+                                                <rect key="frame" x="202" y="0.0" width="172" height="87.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" titleAlignment="center">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Comments with Alamofire">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="AppleSDGothicNeo-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="showCommentsWithAlamofire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2TZ-ip-bsu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -93,6 +206,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Controls" id="dCF-M1-IRS"/>
+                    <connections>
+                        <segue destination="n18-jN-uGB" kind="show" identifier="CommentsWithAlamoFire" id="5y1-6t-vMn"/>
+                        <segue destination="R8L-ko-1kJ" kind="show" identifier="showSegueAlmf" id="69m-Zc-M1M"/>
+                        <segue destination="n18-jN-uGB" kind="show" identifier="postRequest" id="8A2-3t-ylw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,27 +230,47 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="dbd-YY-8IC">
                                 <rect key="frame" x="197" y="438" width="20" height="20"/>
                             </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Kdz-oG-qad">
+                                <rect key="frame" x="132" y="533" width="150" height="4"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downloading" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSW-WB-Fd6">
+                                <rect key="frame" x="157.5" y="486" width="99.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="99.5" id="1Ff-ph-q9J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Zp3-NU-Laa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Kdz-oG-qad" firstAttribute="top" secondItem="uSW-WB-Fd6" secondAttribute="bottom" constant="26" id="0GK-jV-fja"/>
+                            <constraint firstItem="Zp3-NU-Laa" firstAttribute="trailing" secondItem="Kdz-oG-qad" secondAttribute="trailing" constant="132" id="0zs-Zf-bqq"/>
                             <constraint firstItem="Zp3-NU-Laa" firstAttribute="trailing" secondItem="hBI-86-n9V" secondAttribute="trailing" constant="20" id="1Ii-aJ-O8A"/>
                             <constraint firstItem="dbd-YY-8IC" firstAttribute="centerX" secondItem="JYi-uH-HIN" secondAttribute="centerX" id="4YQ-Vs-0hp"/>
+                            <constraint firstItem="uSW-WB-Fd6" firstAttribute="centerX" secondItem="JYi-uH-HIN" secondAttribute="centerX" id="8i0-bk-y8h"/>
                             <constraint firstItem="hBI-86-n9V" firstAttribute="leading" secondItem="Zp3-NU-Laa" secondAttribute="leading" constant="20" id="UrZ-1i-RPl"/>
                             <constraint firstItem="hBI-86-n9V" firstAttribute="top" secondItem="Zp3-NU-Laa" secondAttribute="top" id="ZXB-nv-JfP"/>
                             <constraint firstItem="Zp3-NU-Laa" firstAttribute="bottom" secondItem="hBI-86-n9V" secondAttribute="bottom" id="fMw-ZA-zh1"/>
+                            <constraint firstItem="Kdz-oG-qad" firstAttribute="leading" secondItem="Zp3-NU-Laa" secondAttribute="leading" constant="132" id="gLc-dA-d8w"/>
+                            <constraint firstItem="uSW-WB-Fd6" firstAttribute="top" secondItem="dbd-YY-8IC" secondAttribute="bottom" constant="28" id="kM8-tj-Qdx"/>
                             <constraint firstItem="dbd-YY-8IC" firstAttribute="centerY" secondItem="JYi-uH-HIN" secondAttribute="centerY" id="keC-F1-F7D"/>
+                            <constraint firstItem="Zp3-NU-Laa" firstAttribute="bottom" secondItem="Kdz-oG-qad" secondAttribute="bottom" constant="325" id="t9E-47-5sF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Image" id="cV9-le-ZOR"/>
                     <connections>
                         <outlet property="activityIndicator" destination="dbd-YY-8IC" id="cdt-zc-Hyo"/>
+                        <outlet property="completedLabel" destination="uSW-WB-Fd6" id="Xk8-NL-Wn2"/>
                         <outlet property="imageView" destination="hBI-86-n9V" id="2fR-CX-Xaj"/>
+                        <outlet property="progressView" destination="Kdz-oG-qad" id="DNS-d0-hVI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRb-u8-Ksq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="139"/>
+            <point key="canvasLocation" x="1840.5797101449277" y="138.61607142857142"/>
         </scene>
         <!--Comments-->
         <scene sceneID="PjH-5s-Dkf">
@@ -282,6 +420,10 @@
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8A2-3t-ylw"/>
+        <segue reference="69m-Zc-M1M"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
